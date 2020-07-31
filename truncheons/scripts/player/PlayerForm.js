@@ -8,9 +8,9 @@ const contentTarget = document.querySelector(".playerForm")
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "addPlayerToTeam") {
 
-        const playerFirstName = document.querySelector("player--firstName")
-        const playerLastName = document.querySelector("player--lastName")
-        const playerTeam = document.querySelector("player--team")
+        const playerFirstName = document.querySelector("#player--firstName")
+        const playerLastName = document.querySelector("#player--lastName")
+        const playerTeam = document.querySelector("#player--team")
 
         //make a new object representation of the player
         const newPlayer = {
