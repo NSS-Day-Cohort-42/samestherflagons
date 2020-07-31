@@ -1,0 +1,40 @@
+{
+    "teams": [
+        {
+            "name": "Fairies",
+            "dateCreated": "07/31/2020",
+            "id": 1
+        }
+    ],
+    "players": [
+        {
+            "firstName": "Esther",
+            "lastName": "Sanders",
+            "country": "United States",
+            "teamName": "Fairies",
+            "id": 1
+        },
+        {
+            "firstName": "Samantha",
+            "lastName": "Maas",
+            "country": "United States",
+            "teamName": "Fairies",
+            "id": 2
+        },
+        {
+            "firstName": "Steve",
+            "lastName": "Brownlee",
+            "country": "United States",
+            "teamName": "Fairies",
+            "id": 3
+        }
+    ],
+    "teamScores": [
+        {
+            "teamName": "Faires",
+            "teamScore": 3,
+            "dateOfGame": "07/31/2020",
+            "id": 1
+        }
+    ]
+}
