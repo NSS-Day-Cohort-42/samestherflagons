@@ -14,7 +14,7 @@ export const usePlayers = () => {
 
 //function to get players from API
 export const getPlayers = () => {
-    return fetch('http://localhost:8088/players')
+    return fetch('http://localhost:8088/players?_expand=team')
         .then(response => response.json())
         .then(parsedPlayers => {
             players = parsedPlayers

@@ -1,5 +1,6 @@
 //renders a form on initial page load
 import {savePlayer} from "./PlayerProvider.js"
+import { useTeams, getTeams } from "../team/TeamProvider.js"
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".playerForm")
@@ -18,7 +19,7 @@ eventHub.addEventListener("click", clickEvent => {
             firstName: playerFirstName.value,
             lastName: playerLastName.value,
             country: playerCountry.value,
-            teamName: playerTeam.value   
+            teamId: parseInt(playerTeam.value)   
 
         }
 
@@ -27,15 +28,30 @@ eventHub.addEventListener("click", clickEvent => {
 
 })
 
+eventHub.addEventListener("teamStateChanged", () => {
+    const newTeam = useTeams()
+    render(newTeam)
+
+})
+
 
 //render function
-const render = () => {
+const render = (teams) => {
     contentTarget.innerHTML = `
     <h2 id="player--form">New Player:</h2>
         <input type="text" id="player--firstName" placeholder="Enter first name" />
         <input type="text" id="player--lastName" placeholder="Enter last name" />
         <input type="text" id="player--country" placeholder="Enter Country" />
-        <div class="teamSelect"> </div>
+        <select class="dropdown" id="player--team">
+        <option value="0">Choose a team</option>
+        ${
+            teams.map(
+                team => {
+                    return `<option value="${ team.id}">${team.name}</option>`
+                }
+            ).join("")
+        }
+    </select>
         <button id="addPlayerToTeam">Add player to team</button>
     `
 }
@@ -44,5 +60,10 @@ const render = () => {
 
 //function to export player form
 export const PlayerForm = () => {
-    render()
+    getTeams()
+        .then(() => {
+            const teams = useTeams()
+            render(teams)
+        })
+   
 }
