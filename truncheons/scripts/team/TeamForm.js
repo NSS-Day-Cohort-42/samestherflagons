@@ -9,7 +9,8 @@ eventHub.addEventListener("click", clickEvent => {
 
         const newTeam = {
             name: teamName.value,
-            dateCreated: Date.now()
+            dateCreated: Date.now(),
+            playerCount: 1
         }
         saveTeams(newTeam)
     }
