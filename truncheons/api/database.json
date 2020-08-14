@@ -47,20 +47,6 @@
       "country": "United States",
       "teamId": 1,
       "id": 3
-    },
-    {
-      "firstName": "Joe",
-      "lastName": "Smo",
-      "country": "US",
-      "teamId": 2,
-      "id": 4
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Hartzell",
-      "country": "United States",
-      "teamId": 2,
-      "id": 5
     }
   ],
   "teamScores": [
