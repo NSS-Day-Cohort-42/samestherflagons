@@ -1,0 +1,12 @@
+.playerForm {
+    display: flex;
+    justify-content: left;
+    border: 2px solid #2d545e;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.playerList {
+    margin: 1rem;
+    padding: 1rem;
+}

@@ -1,0 +1,32 @@
+@import "./players.css";
+@import "./teams.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+    background-color: #e1b382;
+    font-family: 'Indie Flower', cursive;
+    color: #2d545e;
+}
+
+header {
+    font-size: large;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.container {
+    display: flex;
+}
+
+.content--left {
+    flex: 2;
+}
+.content--right {
+    flex: 1;
+}
+
+button {
+    background-color: #2d545e;
+    color: white;
+}
