@@ -13,7 +13,7 @@ export const PlayerList = () => {
         })
 }
 
-eventHub.addEventListener("playerCreated", () => {
+eventHub.addEventListener("playerChanged", () => {
     const newPlayers = usePlayers()
     render(newPlayers)
     

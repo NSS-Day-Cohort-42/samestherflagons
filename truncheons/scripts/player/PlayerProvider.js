@@ -3,8 +3,8 @@ let players = []
 const eventHub = document.querySelector(".container")
 
 const dispatchStateChangeEvent = () => {
-    const playerStateChanged = new CustomEvent("playerChanged")
-    eventHub.dispatchEvent(playerStateChanged)
+    const playerCreatedEvent = new CustomEvent("playerChanged")
+    eventHub.dispatchEvent(playerCreatedEvent)
 }
 
 //function to make copy of players array
