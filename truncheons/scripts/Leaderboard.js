@@ -16,9 +16,11 @@ eventHub.addEventListener("playerChanged", addPlayerEvent => {
 })
 
 
+
  const teamHTML = (teamObj) => {
     return `
     <section class="leaderboard">
+        <div class="leaderboard--header">
         <div class="leaderboard__lables" id= "lables__team">Team Name:</div>
         <div class="teamName">${teamObj.name} </div>
         <div class="leaderboard__lables" id= "lables__players">Players</div>
